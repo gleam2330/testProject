@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>테스트</title>
+  <style>
+    div {
+      margin-bottom: 50px;
+    }
+
+    /* 공통으로 쓸 요소 */
+    [class*="line-clamp"] {
+      display: block; 
+      display: -webkit-box; 
+      -webkit-box-orient: vertical; 
+      word-break: break-all; 
+      line-height: 1.2; 
+      text-overflow: ellipsis; 
+      overflow: hidden;
+    }
+
+    /* 개별 라인마다 처리 */
+    .line-clamp-1 {
+      -webkit-line-clamp: 1; 
+      height: calc(1em * 1.2);
+      /* 1em: 폰트 하나의 크기 * line-height * 라인수 */
+    }
+    .line-clamp-2 {
+      -webkit-line-clamp: 2; 
+      height: calc(1em * 1.2 * 2);
+    }
+    .line-clamp-3 {
+      -webkit-line-clamp: 3; 
+      height: calc(1em * 1.2 * 3);
+    }
+  </style>
+</head>
+<body>
+  <div>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum tempore et laborum enim, praesentium harum eligendi consequuntur laudantium hic amet, distinctio nam quibusdam, voluptas expedita provident dolorem voluptatibus nostrum in!Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum tempore et laborum enim, praesentium harum eligendi consequuntur laudantium hic amet, distinctio nam quibusdam, voluptas expedita provident dolorem voluptatibus nostrum in!
+  </div>
+  <div class="line-clamp-1">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum tempore et laborum enim, praesentium harum eligendi consequuntur laudantium hic amet, distinctio nam quibusdam, voluptas expedita provident dolorem voluptatibus nostrum in!Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum tempore et laborum enim, praesentium harum eligendi consequuntur laudantium hic amet, distinctio nam quibusdam, voluptas expedita provident dolorem voluptatibus nostrum in!
+  </div>
+  <div class="line-clamp-2">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum tempore et laborum enim, praesentium harum eligendi consequuntur laudantium hic amet, distinctio nam quibusdam, voluptas expedita provident dolorem voluptatibus nostrum in!Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum tempore et laborum enim, praesentium harum eligendi consequuntur laudantium hic amet, distinctio nam quibusdam, voluptas expedita provident dolorem voluptatibus nostrum in!
+  </div>
+  <div class="line-clamp-3">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum tempore et laborum enim, praesentium harum eligendi consequuntur laudantium hic amet, distinctio nam quibusdam, voluptas expedita provident dolorem voluptatibus nostrum in!Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum tempore et laborum enim, praesentium harum eligendi consequuntur laudantium hic amet, distinctio nam quibusdam, voluptas expedita provident dolorem voluptatibus nostrum in!
+  </div>
+</body>
+</html>

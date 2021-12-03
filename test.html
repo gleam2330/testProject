@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>테스트</title>
+
+  <!-- library -->
+  <link rel="stylesheet" href="./assets/css/libs/slick.css">
+  
+  <!-- library -->
+  <script src="./assets/js/libs/jquery-3.6.0.js"></script>
+  <script src="./assets/js/libs/slick.js"></script>
+
+  <style>
+    /* .test2 { display: flex; } */
+    img { max-width: 100%; }
+  </style>
+</head>
+<body>
+  <div class="test2">
+    <div class="test-item"><a href="#"><img src="./assets/images/pb_kv0.jpg" alt="kv1"></a></div>
+    <div class="test-item"><a href="#"><img src="./assets/images/pb_kv1.jpg" alt="kv1"></a></div>
+    <div class="test-item"><a href="#"><img src="./assets/images/pb_kv2.jpg" alt="kv1"></a></div>
+    <div class="test-item"><a href="#"><img src="./assets/images/pb_kv3.jpg" alt="kv1"></a></div>
+  </div>
+
+  <script>
+    $(document).ready(function(){
+      $('.test2').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 2
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>변수 생명</title>
+  <script src="./assets/js/libs/jquery-3.6.0.js"></script>
+</head>
+<body>
+  변수의 생명<br>
+  조건문
+  <script>
+    $(document).ready(function(){
+      console.log('test');
+      var tmpA = 999;
+
+      console.log('tmpA = ' +  tmpA);
+      console.log('tmpA = ',  tmpA);
+      // 💯 
+      // + => 사칙연산의 더하기가 아닙니다 => 문자열 이어주는 
+      // var => 변수를 선언할때 사용하는 키워드
+
+
+      // 함수의 선언
+      function add(value1, value2) {  
+        // console.log('결과1: val1 + val2 = ', value1 + value2);
+        var tmpA = 500;
+        console.log('결과3: tmpA = ', tmpA);
+      }
+      console.log('결과4: tmpA = ', tmpA);
+      // 함수의 호출 => 함수의 이름을 불러준다.
+      add(2, 1);
+
+      var value1 = 10;
+      var value2 = 20;
+      // console.log('결과2: val1 + val2 = ', value1 + value2);
+
+      // 조건문
+
+      // // 1. if문
+      // if ( 조건 ) {
+      //   // 조건에 해당되는 값이 참일때 수행 되는 곳
+      //   // !참 = 거짓(false, 0, 빈값, ...)
+      // }
+
+      // // 2. if-else 문
+      // if ( 조건 ) {
+      //   // 조건이 참일때 수행
+      // } else {
+      //   // 조건이 참이 아닐때 수행
+      // }
+
+      // // 3. if-elseif 문
+      // if ( 조건1 ) {
+      //   // 조건1에 해당하면
+      // } else if ( 조건2 ) {
+      //   // 조건2에 해당하면
+      // } else if ( 조건3 ) {
+      //   // 조건3에 해당하면
+      // } else {
+      //   // 조건 1, 2, 3도 아니면
+      // }
+
+      var score = 65;
+
+      if ( score >= 90 ) {
+        console.log('점수 A');
+      } else if ( score >= 80 ) {
+        console.log('점수 B');
+      } else if ( score >= 70 ) {
+        console.log('점수 C');
+      } else if ( score >= 60) {
+        console.log('점수 D');
+      } else {
+        console.log('F');
+      }
+
+      // 4. 삼항 연산자
+      // (조건) ?  참 : 거짓;
+      var licenseScore = 55;
+      (licenseScore >= 60) ? console.log('합격') : console.log('불합격');
+
+      // 5. switch (if else if 랑 비슷)
+      // switch ( 변수 ) {
+      //   case A:
+      //     // 변수의 값이 A일 경우에 실행
+      //     break;
+      //   case B:
+      //     // 변수의 값이 B일 경우에 실행
+      //     break;
+      //   case C:
+      //     // 변수의 값이 C일 경우에 실행
+      //     break;
+      //   default:
+      //     // 모두 아닐때 수행될 곳
+      //     break;
+      // }
+
+      var color = 'blue';
+
+      switch ( color ) {
+        case 'red':
+          console.log('빨강이야');
+          // break;
+        case 'blue':
+          console.log('파랑이야');
+          // break;
+        case 'green':
+          console.log('녹색이야');
+          break;
+        default:
+          console.log('몰라');
+          break;
+      }
+      
+      
+    });
+  </script>
+</body>
+</html>
